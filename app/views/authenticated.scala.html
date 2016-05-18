@@ -1,0 +1,12 @@
+@(user: String)
+<head>
+        <link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css" />
+</head>
+<body>
+        <div class="w1" align="right">Welcome! @user</div>
+        <div class="wl" align="right"><a href="@routes.Login.logout">Logout</a></div>
+        <button class="btn-primary" type="submit"><a href="@routes.Survey.newSurvey">Create New</a></button>
+        <button class="btn-primary" type="submit"><a href="@routes.Survey.index">Surveys</a></button>
+</body>
+
+

@@ -1,0 +1,31 @@
+<html>
+<head>
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/site.css")">
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    <script src="@routes.Assets.at("javascripts/hello.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/knockout-3.1.0.js")" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://bootsnipp.com/dist/scripts.min.js"></script>
+
+</head>
+<body>
+<div class="contentcontainer">
+    @helper.form(action = routes.Application.add){
+    <div class="container">
+        <div class="row">
+            <div class="form-signin" id="formContainer">
+                <form class="form-signin" id="login" role="form">
+                    <h2 class="form-signin-heading">Registration</h2>
+                    <input type="email" class="form-control" name="user" id="loginEmail" placeholder="Email address" autofocus>
+                    <input type="password" class="form-control" name="password" id="loginPass" placeholder="Password">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" value="Sign Up">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    }
+</div>
+</body>
+</html>

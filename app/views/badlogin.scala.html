@@ -1,0 +1,12 @@
+@(message: String)
+<div class="container">
+    <div class="row">
+        <div class="form-signin" id="formContainer">
+            <form class="form-signin" id="login" role="form">
+                <h2 class="form-signin-heading">@message</h2>
+                <a class="btn btn-lg btn-block" href="@routes.Login.logout" >Sign in</a>
+                <a class="btn btn-lg btn-block" href="@routes.Login.signup">Register</a>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+POST	/   						controllers.Application.add
+POST    /login                      controllers.Login.authenticate
+GET     /newsurvey                  controllers.Survey.newSurvey
+GET     /responses                    controllers.Response.index
+GET     /surveys                           controllers.Survey.index
+POST    /survey                     controllers.Survey.add
+GET     /send/:surveyid                       controllers.Application.send(surveyid: String)
+GET     /logout/login               controllers.Login.logout
+GET     /signup                     controllers.Login.signup
+POST     /survey/:surveyid/send  controllers.Survey.sendSurvey(surveyid: String)
+# GET     /:surveyid                  controllers.Survey.get(surveyid: String)
+GET   /:responseid                  controllers.Response.getResponse(responseid: String)
+POST  /:responseid                  controllers.Response.getResponse(responseid: String)
+POST    /:responseid/post             controllers.Response.addResponse(responseid: String)
+POST    /:responseid/save           controllers.Response.saveResponse(responseid: String)
+#GET     /:responseid                controllers.Response.addResponse(responseid: String)
+GET     /:responseid/confirm            controllers.Response.confirmation(responseid: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

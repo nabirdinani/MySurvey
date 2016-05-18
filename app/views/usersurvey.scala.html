@@ -1,0 +1,33 @@
+@(lstResponses: List[Response])
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="main" class="ui-content">
+    @for(response <- lstResponses) {
+        <h3 align="center" class="title">@response.title</h3>
+        @helper.form(action = routes.Response.addResponse(response.id.stringify)){
+            @if(response.sent != true){
+                    @for(x <- response.questions.length-1 to 0 by -1){
+                        @if(response.questions != ""){
+                            <div align="left">@response.questions(x)</div><br>
+                            <div><input type="text" name="answers[@x]" placeholders="Answer"><br></div>
+                        }
+                    }
+                <div><button type="submit" name="submit" value="false">Save</button></div>
+                <div><button type="submit" name="submit" value="true">Submit</button></div>
+            }else{
+                <h3 align="center">Responses have already been recorded.</h3>
+            }
+        }
+        <!--@helper.form(action = routes.Response.saveResponse(response.id.stringify)){
+            <div><button type="submit">Save</button></div>
+        }-->
+        }
+    </div>
+</div>
+</body>

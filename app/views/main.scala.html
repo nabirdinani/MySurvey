@@ -1,0 +1,23 @@
+@(title: String)(login: Html)(content: Html)
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/site.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/hello.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/knockout-3.1.0.js")" type="text/javascript"></script>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="http://bootsnipp.com/dist/scripts.min.js"></script>
+
+    </head>
+    <body>
+        <div class="sitecontainer">
+            <div class="header">@header(login)</div>
+                <div class="content">@content</div>
+            </div>
+        </div>
+    </body>
+</html>

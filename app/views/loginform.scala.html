@@ -1,0 +1,14 @@
+@helper.form(action = routes.Login.authenticate){
+    <div class="row">
+        <div class="form-signin" id="formContainer">
+            <form class="form-signin" id="login" role="form">
+                <h2 class="form-signin-heading">Login</h2>
+                <input type="email" class="form-control" name="user" id="loginEmail" placeholder="Email address" autofocus>
+                <input type="password" class="form-control" name="password" id="loginPass" placeholder="Password">
+                <button class="btn btn-lg btn-primary btn-block" type="submit" value="Login">Sign in</button>
+            </form>
+            <a class="btn btn-lg btn-block" href="@routes.Login.signup">Register</a>
+        </div>
+</div>
+
+}

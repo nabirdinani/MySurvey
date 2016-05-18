@@ -1,0 +1,38 @@
+.btn-primary {
+background: #4169E1;
+width: 200;
+height: 40;
+border-radius: 4px;
+float: center;
+font-size: 15px
+}
+
+.w1 {
+position: absolute; 
+top: 5px; 
+right: 5px;
+font-size: 18px
+}
+
+.left {
+text-align: right;
+width: 45%;
+float: left;
+font-size: 18px;
+}
+
+.right {
+text-align: left;
+width: 55%;
+float:left;
+font-size: 18px;
+}
+
+.button {
+text-align: center;
+font-size: 18px;
+}
+
+.ui-content {
+text-align: center;
+}

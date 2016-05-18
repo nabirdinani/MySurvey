@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<script>
+window.onload = function(){
+    var btn = document.getElementById('btnId');
+    btn.onclick = function(){
+        var txt = document.createElement("textarea");
+        btn.parentNode.insertBefore(txt, btn);
+    };
+};
+</script>
+<div data-role="page" id="pageone">
+    <div data-role="main" class="ui-content">
+        @helper.form(action = routes.Survey.add){
+        <div class="title">MySurvey</div>
+        <h2 align="left">New Survey</h2>
+        <div align="left"><label>Title: </label><input type="text" name="title" id="title" placeholder="Title" autofocus required></div><br>
+        <div align="left"><label>Questions: </label><input type="text" name="questions" id="questions"  placeholders="Question" required></div>
+        <!--<div><input type="button" id="btnId" value="add"><br></div>!-->
+        <div><button type="submit">Done</button></div>
+        }
+    </div>
+</div>
+</body>
+</html>
